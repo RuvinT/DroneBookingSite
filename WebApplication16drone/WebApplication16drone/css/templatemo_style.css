@@ -1,0 +1,174 @@
+/*  Credit: www.templatemo.com
+
+	1. CSS resets
+	2. Universal styles
+	3. Portfolio styles
+	4. CSS3 flip
+	5. Timeline styles
+	6. Contact styles
+	7. Media queries
+--------------------------------------*/
+
+/*
+Flip Turn Template 
+http://www.templatemo.com/preview/templatemo_413_flip_turn
+*/
+
+/* 1. CSS resets 
+--------------------------------------*/
+
+
+/*  2. Universal styles
+--------------------------------------*/
+.content-container {
+    box-sizing: border-box;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+.center-text {
+    text-align: center;
+}
+.content {
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3. Portfolio styles
+-----------------------------------------*/
+#portfolio-content {
+	margin:  0 auto;
+	display:-webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+#portfolio-content img { 
+	width: 250px; 
+	height: 250px; 
+}
+.portfolio-group {
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+	position: relative;
+	margin: 15px 10px;
+}
+.portfolio-group img {
+	width:100%;
+	height:100%;
+	position:absolute;
+	display:block;
+	box-shadow: 5px 10px 10px -5px rgba(0,0,0,0.5);
+}
+.portfolio-group .detail {
+	display:block;
+	width:100%;
+	height:100%;	
+	position:absolute;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 5px 10px 10px -5px rgba(0,0,0,0.5);
+}
+.portfolio-group .detail h3 {
+	padding: 15px 10px 0 10px;
+}
+.portfolio-group .detail p {
+	text-align: justify;
+	padding: 10px;
+	line-height: 1.8em;
+}
+.portfolio-item { 
+	display:block; 
+	width:100%; 
+	height:100%; 
+}
+.portfolio-item .btn {
+	width: 80px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.09);
+	background-color: rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.44);
+	-ms-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.44);
+	box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.44);
+}
+.portfolio-item .btn:hover { background-color: #ddd; }
+.pagination { width: 100%; }
+.pagination li {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;	
+	background-color: white;
+	-webkit-box-shadow: 1px 1px 1px rgba(51,51,51,0.4);
+	-ms-box-shadow: 1px 1px 1px rgba(51,51,51,0.4);
+	box-shadow: 1px 1px 1px rgba(51,51,51,0.4);
+	margin-right: 10px;
+	border: 1px solid rgba(44, 44, 44, 0.1);
+}
+.pagination li:last-child {	margin-right: 0; }
+.pagination li.active, .pagination li:hover { background-color: #A7DDFF; }
+
+/*  4. CSS3 flip
+	http://stackoverflow.com/questions/13474210/css3-3d-flip-animation-ie10-transform-origin-preserve-3d-workaround
+	http://www.cssplay.co.uk/menu/css3-3d-card.html
+	http://cssdeck.com/labs/gddxuzki
+-------------------------------------------------------------------------------------*/
+.portfolio-group .portfolio-item img,  .portfolio-group .portfolio-item .detail {
+	-webkit-transition:0.5s ease-in-out;
+	-moz-transition:0.5s ease-in-out;
+	transition:0.5s ease-in-out;
+}
+.portfolio-group .detail {
+	-moz-transform:perspective(800px) rotateY(180deg);
+	-webkit-transform:perspective(800px) rotateY(180deg);
+	transform:perspective(800px) rotateY(180deg);
+}
+.portfolio-group img {
+	-moz-transform:perspective(800px) rotateY(0deg);
+	-webkit-transform:perspective(800px) rotateY(0deg);
+	transform:perspective(800px) rotateY(0deg);
+}
+.portfolio-item:hover > .detail {
+	-moz-transform:perspective(800px) rotateY(0);
+	-webkit-transform:perspective(800px) rotateY(0);
+	transform:perspective(800px) rotateY(0);	
+}
+.portfolio-item:hover > img {
+	-webkit-transform:perspective(800px) rotateY(-179.9deg);
+	-moz-transform:perspective(800px) rotateY(-179.9deg);
+	transform:perspective(800px) rotateY(-179.9deg);	
+}
+.portfolio-group img, .portfolio-group .detail {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* 5. Timeline styles
+--------------------------------------------------------------*/
+span.btn {
+    display: block;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}

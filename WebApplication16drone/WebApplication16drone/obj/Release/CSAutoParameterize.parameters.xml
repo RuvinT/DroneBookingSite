@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="dronerentConnectionString-Web.config Connection String" description="dronerentConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=testdrone.database.windows.net;Initial Catalog=dronerent;Persist Security Info=True;User ID=Indunil;Password=Ashawari123" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="c:\\users\\indunil\\source\\repos\\WebApplication16drone\\WebApplication16drone\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='dronerentConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
